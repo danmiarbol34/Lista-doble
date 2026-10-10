@@ -44,8 +44,8 @@ public class Representante {
 
         info = "Datos del representante:\n"
                 + "Identificacion: " + getIdentificacion()
-                + "Nobre: " + getNombre()
-                + "Numero de niños: " + getNumN();
+                + "\nNobre: " + getNombre()
+                + "\nNumero de niños: " + getNumN();
         return info;
     }
 }
