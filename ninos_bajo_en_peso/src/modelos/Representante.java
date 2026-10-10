@@ -1,5 +1,7 @@
 package modelos;
 
+import javax.swing.JOptionPane;
+
 public class Representante {
 
 
@@ -37,7 +39,12 @@ public class Representante {
     }
 
     public void aumentarNumN() {
-        numN = numN++;
+        // numN =2
+        if (numN < 2) {
+            numN = numN++;
+        } else {
+            JOptionPane.showMessageDialog(null, "Un representante solo puede tener hasta 2 niños");
+        }
     }
 
     public String infoRepresentante() {

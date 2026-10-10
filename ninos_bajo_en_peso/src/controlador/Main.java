@@ -4,7 +4,7 @@
  */
 package controlador;
 
-import vista.Registro;
+import vista.*;
 
 /**
  *
@@ -14,13 +14,21 @@ public class Main {
 
     public static void main(String[] args) {
         Registro registro = new Registro();
-        
-        abrirVistaPrincipal(registro);
+        AgregarIncio agregarIncio = new AgregarIncio();
+
+        abrirVistaPrincipal(registro, agregarIncio);
     }
 
-    static void abrirVistaPrincipal(Registro registro) {
+    static void abrirVistaPrincipal(Registro registro, AgregarIncio agregarIncio) {
         registro.setLocationRelativeTo(null);
         registro.setVisible(true);
+
+        mostrarVistarAddInicio(registro, agregarIncio);
+    }
+
+    static void mostrarVistarAddInicio(Registro registro, AgregarIncio agregarIncio) {
+        registro.getEscritorio().add(agregarIncio);
+        agregarIncio.setVisible(true);
     }
 
 }
