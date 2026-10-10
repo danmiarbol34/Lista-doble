@@ -15,9 +15,12 @@ public class Main {
     public static void main(String[] args) {
         Registro registro = new Registro();
         
+        abrirVistaPrincipal(registro);
+    }
+
+    static void abrirVistaPrincipal(Registro registro) {
         registro.setLocationRelativeTo(null);
-        
-        registro.setVisible(true );
+        registro.setVisible(true);
     }
 
 }
